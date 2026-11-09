@@ -12,6 +12,8 @@
         in
         {
             devShells.${system}.default = pkgs.mkShell {
+                shell = pkgs.zsh;
+                
                 buildInputs = with pkgs; [
                     zsh
                     starship
@@ -19,11 +21,10 @@
                 ];
             
                 shellHook = ''
-                    export SHELL="${pkgs.zsh}/bin/zsh"
                     eval "$(starship init zsh)"
                     node -v
                     npm -v
                 '';
             };
         };
-}
+}a
