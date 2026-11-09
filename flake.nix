@@ -1,5 +1,5 @@
 {
-    description = "node dev env riced"
+    description = "node dev env riced";
     
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
