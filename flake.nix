@@ -18,12 +18,12 @@
                     nodejs_26
                 ];
             
-            shellHook = ''
-                eval "$(starship init zsh)"
-                exec zsh
-                node -v
-                npm -v
-            '';
+                shellHook = ''
+                    export SHELL="${pkgs.zsh}/bin/zsh"
+                    eval "$(starship init zsh)"
+                    node -v
+                    npm -v
+                '';
+            };
         };
-    };
 }
