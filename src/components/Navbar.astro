@@ -1,0 +1,27 @@
+---
+// Navbar.astro
+---
+
+<header class="fixed top-6 left-0 right-0 z-50 px-4">
+  <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-3 bg-white/80 backdrop-blur-md border border-neutral-200 rounded-full shadow-sm">
+    <!-- Left Group: Navigation Links -->
+    <div class="flex items-center gap-8">
+      <a href="/treatment" class="text-neutral-800 hover:text-neutral-500 font-medium transition-colors">
+        Treatment
+      </a>
+      <a href="/about" class="text-neutral-800 hover:text-neutral-500 font-medium transition-colors">
+        About Us
+      </a>
+    </div>
+
+    {/* Right Group: Action Button */}
+    <div>
+      <a 
+        href="/consultation" 
+        class="inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 rounded-full transition-colors"
+      >
+        Book Your Consultation
+      </a>
+    </div>
+  </nav>
+</header>
