@@ -1,0 +1,13 @@
+services:
+  astro:
+    build: .
+    container_name: astro_dev
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+    environment:
+      - HOST=0.0.0.0
+      - PORT=4321
