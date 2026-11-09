@@ -12,16 +12,14 @@
         in
         {
             devShells.${system}.default = pkgs.mkShell {
-                shell = pkgs.zsh;
                 
                 buildInputs = with pkgs; [
-                    zsh
                     starship
                     nodejs_26
                 ];
             
                 shellHook = ''
-                    eval "$(starship init zsh)"
+                    eval "$(starship init bash)"
                     node -v
                     npm -v
                 '';
